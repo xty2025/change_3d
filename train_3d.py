@@ -61,7 +61,6 @@ def train_3d_model():
         start_epoch = checkpoint['epoch']
         best_iou = checkpoint.get('best_iou', 0.0)
         print(f"[INFO] 加载检查点，从第 {start_epoch} 轮继续训练，最佳IoU: {best_iou:.4f}")
-
     print("[STEP] 开始训练循环...")
     stop_early = False
     for epoch in range(start_epoch, num_epochs):
